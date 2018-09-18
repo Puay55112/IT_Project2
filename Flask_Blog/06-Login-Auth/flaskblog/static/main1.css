@@ -1,0 +1,20 @@
+body,
+
+button {
+    font : 14px "Trebuchet MS", sans-serif;
+}
+
+.button {
+    padding: 8px 16px;
+    display:inline-block;
+    text-decoration: navy;
+    border-radius: 3px;
+    background-color: #e3e3e3;
+}
+
+.button-logout{
+    background: #cbd5db;
+    position: relative;
+        left: 620px;
+        top: 80px;
+}

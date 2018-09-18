@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{title}}</title>
+    <link rel="stylesheet" href="static/main1.css">
+    <style media="screen">
+    .krapong {
+        position: relative;
+        left: 520px;
+        border-style: solid;
+        border-width: 1px;
+        background: lightsteelblue;
+        width: 300px;
+        height: 400px;
+        overflow: auto;
+    }
+    .installedVMs{
+        position: fixed;
+        left: 850px;
+        top: 100px;
+    }
+    .deployedVMs{
+        position: fixed;
+        left: 850px;
+        top: 150px;
+    }
+    .localVMs{
+        position: fixed;
+        left: 850px;
+        top: 200px;
+    }
+    .newVM{
+        position: fixed;
+        left: 550px;
+    }
+    .deployVM{
+        position: fixed;
+        left: 680px;
+    }
+    .delete{
+        position: relative;
+        left: 450px;
+        top: 40px;
+    }
+    .manage{
+        position: relative;
+        left: 490px;
+        top: 40px;
+    }
+
+    </style>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <center><h1> All VM list (Admin access)</h1></center>
+
+<div class="krapong">
+        {% for n in my_list %}
+        <li>{{n}} </li><br />
+        {% endfor %}
+
+</div>
+
+<p><button class="installedVMs">See installed VMs</button></p>
+<p><button class="deployedVMs">See deployed VMs</button></p>
+<p><button class="localVMs">See local VMs</button></p>
+  <button class="newVM"><a href="{{ url_for('createvm') }}"> Create new VM</a></button>
+<button class="deployVM"> <a href="{{ url_for('deployvm') }}"> Deploy VM</a></button>
+  <button class="button button-logout"><a href="{{ url_for('logout') }}"> Log out</a></button>
+<button class ="delete">Delete VM</button>
+<button class = "manage">Manage VM</button>
+
+</body>
+</html>
